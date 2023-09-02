@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.0/cropper.min.css" integrity="sha512-gNSHyKCA9X3fCDdTd5UxyNaSznSyGtR9pwf5YwSp7haDRz6Gqor0nY20POCYLseXq5n/FGAEogNp7G0d56d3jg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style type="text/css">
+img{width:100%;}
+#wrapper{
+width:300px;
+height:375px;
+}
+</style>
+</head>
+<body>
+<div id="wrapper" >
+<img id="imageForCrop" src="mk.png" >
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.0/cropper.min.js" integrity="sha512-7C1FbUL8fX5IKwBEHEjwyyGssfSOKms2NQbMj3GYdeQTr4Xmbrk/q/4eqcDuROAbJwT71ATVpVIUiaeMnNqq/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+let cropper = new Cropper(document.querySelector("#imageForCrop"),{
+viewMode: 3,
+    dragMode: 'move',
+    aspectRatio: 20 / 25,
+    autoCropArea: 1,
+    restore: !1,
+    modal: !1,
+    highlight: !1,
+    cropBoxMovable: !1,
+    cropBoxResizable: !1,
+    toggleDragModeOnDblclick: !1,
+});
+</script>
+
+</body>
+</html>
